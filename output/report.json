@@ -1,0 +1,139 @@
+{
+  "generatedAt": "2026-01-13T09:31:43.115Z",
+  "totalCost": 7902,
+  "totalHours": 75.5,
+  "details": [
+    {
+      "employeeId": "1",
+      "date": "2023-12-15",
+      "hours": 8,
+      "project": "Project Alpha",
+      "employee": "1",
+      "employeeName": "Mit",
+      "department": "Engineering",
+      "baseSalary": 80000,
+      "hourlyCost": 60,
+      "totalCost": 480
+    },
+    {
+      "employeeId": "2",
+      "date": "2023-12-15",
+      "hours": 7,
+      "project": "Project Alpha",
+      "employee": "2",
+      "employeeName": "Smit",
+      "department": "Engineering",
+      "baseSalary": 250000,
+      "hourlyCost": 180,
+      "totalCost": 1260
+    },
+    {
+      "employeeId": "3",
+      "date": "2023-12-15",
+      "hours": 8,
+      "project": "Project Beta",
+      "employee": "3",
+      "employeeName": "Yash",
+      "department": "Engineering",
+      "baseSalary": 140000,
+      "hourlyCost": 95,
+      "totalCost": 760
+    },
+    {
+      "employeeId": "4",
+      "date": "2023-12-16",
+      "hours": 6,
+      "project": "Website Redesign",
+      "employee": "4",
+      "employeeName": "Datt",
+      "department": "Design",
+      "baseSalary": 130000,
+      "hourlyCost": 89,
+      "totalCost": 534
+    },
+    {
+      "employeeId": "1",
+      "date": "2023-12-16",
+      "hours": 8,
+      "project": "Project Alpha",
+      "employee": "1",
+      "employeeName": "Mit",
+      "department": "Engineering",
+      "baseSalary": 80000,
+      "hourlyCost": 60,
+      "totalCost": 480
+    },
+    {
+      "employeeId": "2",
+      "date": "2023-12-16",
+      "hours": 6.5,
+      "project": "Internal Ops",
+      "employee": "2",
+      "employeeName": "Smit",
+      "department": "Engineering",
+      "baseSalary": 250000,
+      "hourlyCost": 180,
+      "totalCost": 1170
+    },
+    {
+      "employeeId": "3",
+      "date": "2023-12-16",
+      "hours": 7,
+      "project": "Project Beta",
+      "employee": "3",
+      "employeeName": "Yash",
+      "department": "Engineering",
+      "baseSalary": 140000,
+      "hourlyCost": 95,
+      "totalCost": 665
+    },
+    {
+      "employeeId": "4",
+      "date": "2023-12-17",
+      "hours": 5,
+      "project": "Website Redesign",
+      "employee": "4",
+      "employeeName": "Datt",
+      "department": "Design",
+      "baseSalary": 130000,
+      "hourlyCost": 89,
+      "totalCost": 445
+    },
+    {
+      "employeeId": "1",
+      "date": "2024-01-10",
+      "hours": 8,
+      "project": "Project Gamma",
+      "employee": "1",
+      "employeeName": "Mit",
+      "department": "Engineering",
+      "baseSalary": 95000,
+      "hourlyCost": 71,
+      "totalCost": 568
+    },
+    {
+      "employeeId": "2",
+      "date": "2024-01-10",
+      "hours": 4,
+      "project": "Project Gamma",
+      "employee": "2",
+      "employeeName": "Smit",
+      "department": "Engineering",
+      "baseSalary": 270000,
+      "hourlyCost": 195,
+      "totalCost": 780
+    },
+    {
+      "employeeId": "3",
+      "date": "2024-01-11",
+      "hours": 8,
+      "project": "Project Beta",
+      "employee": "3",
+      "employeeName": "Yash",
+      "department": "Engineering",
+      "baseSalary": 140000,
+      "hourlyCost": 95,
+      "totalCost": 760
+    }
+  ]
+}
