@@ -1,119 +1,3 @@
-import data from './data/employees.json' assert { type: "json" };
-import timeData from "./data/time-entries.json" assert { type: "json" };
-
-const fuck = {
-  "employees": [
-    {
-      "id": "1",
-      "name": "Mit",
-      "role": "employee",
-      "department": "Engineering",
-      "costHistory": [
-        {
-          "effectiveDate": "2023-01-01",
-          "baseSalary": 80000,
-          "benefitsPercent": 20,
-          "overheadMultiplier": 1.3
-        },
-        {
-          "effectiveDate": "2024-01-01",
-          "baseSalary": 95000,
-          "benefitsPercent": 20,
-          "overheadMultiplier": 1.3
-        },
-        {
-          "effectiveDate": "2025-01-01",
-          "baseSalary": 110000,
-          "benefitsPercent": 20,
-          "overheadMultiplier": 1.3
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Smit",
-      "role": "CTO",
-      "department": "Engineering",
-      "costHistory": [
-        {
-          "effectiveDate": "2023-01-01",
-          "baseSalary": 250000,
-          "benefitsPercent": 20,
-          "overheadMultiplier": 1.25
-        },
-        {
-          "effectiveDate": "2024-01-01",
-          "baseSalary": 270000,
-          "benefitsPercent": 20,
-          "overheadMultiplier": 1.25
-        },
-        {
-          "effectiveDate": "2025-01-01",
-          "baseSalary": 290000,
-          "benefitsPercent": 20,
-          "overheadMultiplier": 1.25
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "name": "Yash",
-      "role": "Senior Developer",
-      "department": "Engineering",
-      "costHistory": [
-        {
-          "effectiveDate": "2023-03-15",
-          "baseSalary": 140000,
-          "benefitsPercent": 18,
-          "overheadMultiplier": 1.2
-        },
-        {
-          "effectiveDate": "2024-03-15",
-          "baseSalary": 155000,
-          "benefitsPercent": 18,
-          "overheadMultiplier": 1.2
-        },
-        {
-          "effectiveDate": "2025-03-15",
-          "baseSalary": 170000,
-          "benefitsPercent": 18,
-          "overheadMultiplier": 1.2
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "name": "Datt",
-      "role": "Lead Designer",
-      "department": "Design",
-      "costHistory": [
-        {
-          "effectiveDate": "2023-02-01",
-          "baseSalary": 130000,
-          "benefitsPercent": 18,
-          "overheadMultiplier": 1.2
-        },
-        {
-          "effectiveDate": "2024-02-01",
-          "baseSalary": 145000,
-          "benefitsPercent": 18,
-          "overheadMultiplier": 1.2
-        },
-        {
-          "effectiveDate": "2025-02-01",
-          "baseSalary": 160000,
-          "benefitsPercent": 18,
-          "overheadMultiplier": 1.2
-        }
-      ]
-    }
-  ]
-}
-
-
-
-
-
 // console.log(employeeData.employees)
 // console.log(employeeTimeEntry)
 const totalWorksHours = 40 * 52  /* weekly hours * total weeks */ 
@@ -124,7 +8,7 @@ function calculateHourlyRate (annualSalary) {
     return hourlyRate 
 }
 
-console.log(calculateHourlyRate(80000))
+// console.log(calculateHourlyRate(80000))
 
 function applyMultipliers (baseRate, benefitsPercent, overheadMultiplier) {
     const baseSalary = baseRate * totalWorksHours
@@ -134,7 +18,7 @@ function applyMultipliers (baseRate, benefitsPercent, overheadMultiplier) {
     return totalHourlyRate
 }
 
-console.log(applyMultipliers(38.46, 20, 1.3))
+// console.log(applyMultipliers(38.46, 20, 1.3))
 const dec15 = new Date("2025-12-15")
 const feb23 = new Date ("2023-02-23")
 const jun24 = new Date ("2004-06-24")
@@ -150,7 +34,7 @@ function findCostEntryForDate (costHistory, targetDate) {
     return sortedCostHistory[0]
 }
 
-console.log(findCostEntryForDate(fuck.employees[0].costHistory, dec15));
+// console.log(findCostEntryForDate(fuck.employees[0].costHistory, dec15));
 
 
 function calculateEmployeeCost (employee, date) {
@@ -182,7 +66,43 @@ function calculateEmployeeCost (employee, date) {
     }
 
 }
+// console.log(calculateEmployeeCost(fuck.employees[0], dec15))
 
-console.log(calculateEmployeeCost(fuck.employees[0], dec15))
+function processAllTimeEntries (employees, timeEntries) {
+
+  const results = []
+
+for (const entry of timeEntries) {
+  
+  const empData = employees.find(e => e.id === entry.employeeId)
+  
+  if (!empData) {
+    results.push({
+      ...entry,
+      error: "Employee not found!"
+    })
+    continue
+  }
+
+  const costData = calculateEmployeeCost(empData, new Date(entry.date))
+  
+  const totalCost = entry.hours * costData.hourlyCost
+
+  results.push({
+    ...entry,
+    ...costData,
+    totalCost: Math.round(totalCost) 
+  })
+}
+  return results
+}
+
+export default {
+  calculateHourlyRate,
+  applyMultipliers,
+  findCostEntryForDate,
+  calculateEmployeeCost,
+  processAllTimeEntries
+}
 
 
