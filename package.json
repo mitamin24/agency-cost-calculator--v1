@@ -16,5 +16,9 @@
     "dotenv": "^17.2.3",
     "fastify": "^5.7.1",
     "fastify-plugin": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "typescript": "^5.9.3"
   }
 }

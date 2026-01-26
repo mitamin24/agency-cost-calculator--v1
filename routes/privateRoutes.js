@@ -1,4 +1,4 @@
-import employeesData from "../data/employees.json" assert { type: "json" };
+import employeesData from "../src/data/employees.json" assert { type: "json" };
 
 
 export default async function privateRoutes(fastify) {
