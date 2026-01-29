@@ -149,8 +149,6 @@ function processAllTimeEntries (employees:EmployeesFile, timeEntries:TimeEntryFi
     return results
 }
 
-
-
 export default {
     calculateEmployeeCost,
     processAllTimeEntries,

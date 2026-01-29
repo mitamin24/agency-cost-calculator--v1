@@ -1,6 +1,5 @@
 import type { FastifyInstance, FastifyReply, FastifyRequest, FastifySchema } from "fastify";
-import { createRequire } from "module";
-const require = createRequire(import.meta.url); 
+import employeesData from "../data/employees.json" with { type: "json" };
 
 type LoginBody = {
     password:string
@@ -23,13 +22,10 @@ type Employee = {
     costHistory?: costHistoryItem[]
 }
 
-
 type LoginResponse = {
     message: string,
     employee: Employee
 }
-
-const employeesData = require("../data/employees.json") as { employees: Employee[] };
 
 const LoginSchema: FastifySchema = {
     

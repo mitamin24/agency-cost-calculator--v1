@@ -3,6 +3,8 @@ import configPlugin from "./plugins/config.js"
 import publicRoutes from "./routes/publicRouter.js"
 import privateRoutes from "./routes/privateRouter.js"
 import authConfig from "./plugins/config.js"
+import dotenv from "dotenv"
+dotenv.config()
 
 
 const fastify:FastifyInstance = Fastify({logger: true, 
@@ -54,3 +56,16 @@ fastify.setErrorHandler((err: FastifyError, req: FastifyRequest, reply:FastifyRe
   })
 
 })
+
+async function start() {
+  try {
+
+    await fastify.ready()
+    fastify.listen({ port: Number(process.env.PORT || 3002)})
+    console.log("Server is running  on port => => =>")
+  } catch (error) {
+    fastify.log.error(error)
+    process.exit(1)
+  }
+}
+start()

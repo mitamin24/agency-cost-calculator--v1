@@ -1,8 +1,7 @@
 import fs from "fs/promises"
-import { createRequire } from "module";
 import calculator from "./calculator.js"
-const require = createRequire(import.meta.url);
-// import calculator from 
+import employeeData from "./data/employees.json" with { type: "json" };
+import timeEntries from "./data/time-entries.json" with { type: "json" };
 
 export interface CostHistoryItems {
     effectiveDate :string,
@@ -34,9 +33,6 @@ export interface TimeEntry {
 export interface TimeEntryFile {
     timeEntries: TimeEntry[]
 }
-
-const employeeData = require("./data/employees.json") as EmployeesFile;
-const timeEntries = require("./data/time-entries.json") as TimeEntryFile;
 
 async function main () {
    try {
@@ -72,7 +68,7 @@ async function main () {
         }
         
         const totalCost = successfulResults.reduce((sum, r) => sum + r.totalCost, 0)
-        console.log('totallllll', totalCost);
+        // console.log('totallllll', totalCost);
         const totalHours = successfulResults.reduce((sum, r) => sum + r.hours, 0)
 
         console.log('=== SUMMARY ===');
