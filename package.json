@@ -10,12 +10,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.28.0",
+  "packageManager": "pnpm@10.28.2",
   "dependencies": {
     "@fastify/ajv-compiler": "^4.0.5",
+    "@types/pg": "^8.16.0",
     "dotenv": "^17.2.3",
     "fastify": "^5.7.1",
-    "fastify-plugin": "^5.1.0"
+    "fastify-plugin": "^5.1.0",
+    "pg": "^8.17.2"
   },
   "devDependencies": {
     "@types/node": "^25.0.10",
