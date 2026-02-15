@@ -4,6 +4,4 @@ declare module 'fastify' {
   interface FastifyRequest {
     user: number | null
   }
-  
 }
-

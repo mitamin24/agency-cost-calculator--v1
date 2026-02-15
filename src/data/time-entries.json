@@ -1,70 +1,70 @@
 {
-    "timeEntries" : [
-        {
-            "employeeId": "1",
-            "date": "2023-12-15",
-            "hours": 8,
-            "project": "Project Alpha"
-        },
-        {
-            "employeeId": "2",
-            "date": "2023-12-15",
-            "hours": 7,
-            "project": "Project Alpha"
-        },
-        {
-            "employeeId": "3",
-            "date": "2023-12-15",
-            "hours": 8,
-            "project": "Project Beta"
-        },
-        {
-            "employeeId": "4",
-            "date": "2023-12-16",
-            "hours": 6,
-            "project": "Website Redesign"
-        },
-        {
-            "employeeId": "1",
-            "date": "2023-12-16",
-            "hours": 8,
-            "project": "Project Alpha"
-        },
-        {
-            "employeeId": "2",
-            "date": "2023-12-16",
-            "hours": 6.5,
-            "project": "Internal Ops"
-        },
-        {
-            "employeeId": "3",
-            "date": "2023-12-16",
-            "hours": 7,
-            "project": "Project Beta"
-        },
-        {
-            "employeeId": "4",
-            "date": "2023-12-17",
-            "hours": 5,
-            "project": "Website Redesign"
-        },
-        {
-            "employeeId": "1",
-            "date": "2024-01-10",
-            "hours": 8,
-            "project": "Project Gamma"
-        },
-        {
-            "employeeId": "2",
-            "date": "2024-01-10",
-            "hours": 4,
-            "project": "Project Gamma"
-        },
-        {
-            "employeeId": "3",
-            "date": "2024-01-11",
-            "hours": 8,
-            "project": "Project Beta"
-        }
-    ]
+  "timeEntries": [
+    {
+      "employeeId": "1",
+      "date": "2023-12-15",
+      "hours": 8,
+      "project": "Project Alpha"
+    },
+    {
+      "employeeId": "2",
+      "date": "2023-12-15",
+      "hours": 7,
+      "project": "Project Alpha"
+    },
+    {
+      "employeeId": "3",
+      "date": "2023-12-15",
+      "hours": 8,
+      "project": "Project Beta"
+    },
+    {
+      "employeeId": "4",
+      "date": "2023-12-16",
+      "hours": 6,
+      "project": "Website Redesign"
+    },
+    {
+      "employeeId": "1",
+      "date": "2023-12-16",
+      "hours": 8,
+      "project": "Project Alpha"
+    },
+    {
+      "employeeId": "2",
+      "date": "2023-12-16",
+      "hours": 6.5,
+      "project": "Internal Ops"
+    },
+    {
+      "employeeId": "3",
+      "date": "2023-12-16",
+      "hours": 7,
+      "project": "Project Beta"
+    },
+    {
+      "employeeId": "4",
+      "date": "2023-12-17",
+      "hours": 5,
+      "project": "Website Redesign"
+    },
+    {
+      "employeeId": "1",
+      "date": "2024-01-10",
+      "hours": 8,
+      "project": "Project Gamma"
+    },
+    {
+      "employeeId": "2",
+      "date": "2024-01-10",
+      "hours": 4,
+      "project": "Project Gamma"
+    },
+    {
+      "employeeId": "3",
+      "date": "2024-01-11",
+      "hours": 8,
+      "project": "Project Beta"
+    }
+  ]
 }
