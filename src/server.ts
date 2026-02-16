@@ -8,9 +8,8 @@ import configPlugin from './plugins/config.js'
 import publicRoutes from './routes/publicRouter.js'
 import privateRoutes from './routes/privateRouter.js'
 import authConfig from './plugins/config.js'
-import dotenv from 'dotenv'
 import { isAppError } from './errors/DatabaseErrors.js'
-dotenv.config()
+
 
 const fastify: FastifyInstance = Fastify({
   logger: true,
@@ -90,7 +89,7 @@ fastify.setErrorHandler((err: FastifyError, req: FastifyRequest, reply: FastifyR
 async function start() {
   try {
     await fastify.ready()
-    const address = await fastify.listen({ port: Number(process.env.PORT || 3002) })
+    const address = await fastify.listen({ port: Number(fastify.config.PORT) })
     console.log(`Server is running at ${address}`)
   } catch (error) {
     fastify.log.error(error)
